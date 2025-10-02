@@ -13,12 +13,20 @@ import {
 } from "vue";
 import axios from "axios";
 
-async function getProducts(params) {
-  const response = await axios.get("http://localhost:3000/products");
-  console.log(response.data);
-}
+const products = ref([]);
 
-getProducts();
+products.value = await axios
+  .get("http://localhost:3000/products")
+  .then((res) => res.data);
+console.log(products.value);
+
+// async function getProducts(params) {
+//   const response = await axios.get("http://localhost:3000/products");
+//   products.value = response.data;
+//   console.log(response.data);
+// }
+
+// getProducts();
 // const page = ref(1);
 
 // function nextPage() {
@@ -55,7 +63,11 @@ getProducts();
     <!-- {{ page }}
     <button @click="nextPage">Next</button> -->
     <div class="product-grid">
-      <ProductCard />
+      <ProductCard
+        v-for="(product, index) in products"
+        :key="index"
+        :product="product"
+      />
     </div>
     <div class="pagination">
       <Pagination />
