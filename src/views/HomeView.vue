@@ -32,6 +32,14 @@ watch(page, async () => {
     .then((res) => res.data);
 });
 
+console.log(products.value);
+
+function changePage(newPage) {
+  if (newPage < 1) return;
+  if (newPage > products.value.total_pages) return;
+  page.value = newPage;
+}
+
 // async function getProducts(params) {
 //   const response = await axios.get("http://localhost:3000/products");
 //   products.value = response.data;
@@ -82,7 +90,11 @@ watch(page, async () => {
       />
     </div>
     <div class="pagination">
-      <Pagination />
+      <Pagination
+        :page="page"
+        :total_pages="products.pages"
+        @change-page="changePage"
+      />
     </div>
   </main>
 </template>
