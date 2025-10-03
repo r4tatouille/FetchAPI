@@ -12,13 +12,25 @@ import {
   onUnmounted,
 } from "vue";
 import axios from "axios";
+import { watch } from "vue";
 
 const products = ref([]);
+const page = ref(1);
+const limit = ref(8);
 
 products.value = await axios
-  .get("http://localhost:3000/products")
+  .get(
+    `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`
+  )
   .then((res) => res.data);
-console.log(products.value);
+
+watch(page, async () => {
+  products.value = await axios
+    .get(
+      `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`
+    )
+    .then((res) => res.data);
+});
 
 // async function getProducts(params) {
 //   const response = await axios.get("http://localhost:3000/products");
@@ -64,7 +76,7 @@ console.log(products.value);
     <button @click="nextPage">Next</button> -->
     <div class="product-grid">
       <ProductCard
-        v-for="(product, index) in products"
+        v-for="(product, index) in products.data"
         :key="index"
         :product="product"
       />
