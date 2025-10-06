@@ -15,7 +15,7 @@ import axios from "axios";
 import { watch } from "vue";
 
 const products = ref([]);
-const page = ref(1);
+const page = ref(2);
 const limit = ref(8);
 
 products.value = await axios
@@ -36,7 +36,7 @@ console.log(products.value);
 
 function changePage(newPage) {
   if (newPage < 1) return;
-  if (newPage > products.value.total_pages) return;
+  if (newPage > products.value.totalPages) return;
   page.value = newPage;
 }
 
@@ -92,7 +92,7 @@ function changePage(newPage) {
     <div class="pagination">
       <Pagination
         :page="page"
-        :total_pages="products.pages"
+        :totalPages="products.pages"
         @change-page="changePage"
       />
     </div>

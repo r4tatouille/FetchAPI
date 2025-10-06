@@ -4,10 +4,10 @@ const props = defineProps({
   totalPages: Number,
 });
 
-const emit = defineEmits("change-page");
+const emit = defineEmits(["changePage"]);
 
-function cahngePage(newPage) {
-  emit("change-page", newPage);
+function changePage(newPage) {
+  emit("changePage", newPage);
 }
 </script>
 
@@ -15,7 +15,7 @@ function cahngePage(newPage) {
   <button
     class="pagination-button"
     id="prevPage"
-    @click="cahngePage(page - 1)"
+    @click="changePage(page - 1)"
     v-show="page > 1"
   >
     &lt;
@@ -24,7 +24,7 @@ function cahngePage(newPage) {
   <button
     class="pagination-button"
     id="nextPage"
-    @click="cahngePage(page + 1)"
+    @click="changePage(page + 1)"
     v-show="page < totalPages"
   >
     &gt;
