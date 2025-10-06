@@ -16,5 +16,3 @@ import HomeView from "./views/HomeView.vue";
     </template>
   </suspense>
 </template>
-
-<style scoped></style>
