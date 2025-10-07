@@ -1,6 +1,7 @@
 <script setup>
 import ProductCard from "@/components/ProductCard.vue";
 import Pagination from "@/components/Pagination.vue";
+import Loading from "@/components/Loading.vue";
 
 import {
   onMounted,
@@ -10,35 +11,60 @@ import {
   onUpdated,
   onBeforeUnmount,
   onUnmounted,
+  watchEffect,
 } from "vue";
 import axios from "axios";
 import { watch } from "vue";
 
 const products = ref([]);
-const page = ref(2);
+const page = ref(1);
 const limit = ref(8);
+const isLoading = ref(true);
 
-products.value = await axios
-  .get(
-    `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`
-  )
-  .then((res) => res.data);
+async function fetchData() {
+  const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
+  try {
+    isLoading.value = true;
+    const response = await axios.get(API_URL);
+    products.value = response.data;
+  } catch (error) {
+    console.error(error);
+  } finally {
+    isLoading.value = false;
+  }
+}
 
-watch(page, async () => {
-  products.value = await axios
-    .get(
-      `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`
-    )
-    .then((res) => res.data);
+watchEffect(() => {
+  fetchData();
 });
-
-console.log(products.value);
 
 function changePage(newPage) {
   if (newPage < 1) return;
   if (newPage > products.value.totalPages) return;
   page.value = newPage;
 }
+// onMounted(async () => {
+//   try {
+//     products.value = await axios.get(API_URL).then((res) => res.data);
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     isLoading.value = false;
+//   }
+// });
+
+// watch(page, async () => {
+//   try {
+//     isLoading.value = true;
+//     products.value = await axios.get(API_URL).then((res) => res.data);
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     isLoading.value = false;
+//   }
+// });
+
+// console.log(products.value);
 
 // async function getProducts(params) {
 //   const response = await axios.get("http://localhost:3000/products");
@@ -79,7 +105,10 @@ function changePage(newPage) {
 </script>
 
 <template>
-  <main>
+  <div v-if="isLoading">
+    <Loading />
+  </div>
+  <main v-else>
     <!-- {{ page }}
     <button @click="nextPage">Next</button> -->
     <div class="product-grid">
