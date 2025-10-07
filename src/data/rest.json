@@ -5,27 +5,6 @@
       "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
       "price": 449,
       "image": "https://placehold.co/600x400",
-      "id": "1"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "2"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "3"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
       "id": "4"
     },
     {
@@ -40,35 +19,7 @@
       "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
       "price": 449,
       "image": "https://placehold.co/600x400",
-      "id": "6"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
       "id": "7"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "8"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "9"
-    },
-    {
-      "id": "10",
-      "title": "Smart Home Security System",
-      "description": "Protect your home with this smart security system featuring cameras and sensors.",
-      "price": 349.99,
-      "image": "https://placehold.co/600x400"
     },
     {
       "id": "11",
@@ -78,24 +29,10 @@
       "image": "https://placehold.co/600x400"
     },
     {
-      "id": "12",
-      "title": "Ultra-Thin Laptop Stand",
-      "description": "Elevate your laptop for ergonomic use with this ultra-thin and portable laptop stand.",
-      "price": 29.99,
-      "image": "https://placehold.co/600x400"
-    },
-    {
       "id": "13",
       "title": "Smart Thermostat",
       "description": "Control and monitor your home's temperature with this intelligent and energy-efficient smart thermostat.",
       "price": 129.99,
-      "image": "https://placehold.co/600x400"
-    },
-    {
-      "id": "14",
-      "title": "High-Performance Blender",
-      "description": "Blend smoothies, soups, and more with ease using this powerful high-performance blender.",
-      "price": 149.99,
       "image": "https://placehold.co/600x400"
     },
     {

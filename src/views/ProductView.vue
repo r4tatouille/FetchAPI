@@ -1,14 +1,47 @@
+<script setup>
+import { onMounted, ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import axios from "axios";
+import ProductForm from "@/components/ProductForm.vue";
+
+const route = useRoute();
+const router = useRouter();
+
+const id = route.params.id;
+const product = ref({});
+const API_URL = `http://localhost:3000/products/${id}`;
+
+onMounted(() => {
+  fetchData();
+});
+
+async function fetchData() {
+  try {
+    const response = await axios.get(API_URL);
+    product.value = response.data;
+    console.error(error);
+  } catch (error) {}
+}
+
+async function deleteProduct(params) {
+  try {
+    await axios.delete(API_URL);
+    router.push("/");
+  } catch (erorr) {
+    console.error(erorr);
+  }
+}
+</script>
+
 <template>
   <div class="product-detail">
-    <h2>Product title</h2>
-    <img
-      src="https://placehold.co/600x400"
-      alt="product.title"
-      class="product-image"
-    />
-    <p>Product description</p>
-    <p>Product price</p>
+    <h2>{{ product.title }}</h2>
+    <img :src="product.image" :alt="product.title" class="product-image" />
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+    <ProductForm />
     <router-link to="/" class="back-button">Back</router-link>
+    <button @click="deleteProduct" class="delete-button">Delete</button>
   </div>
 </template>
 
@@ -35,7 +68,6 @@
 .product-detail button {
   margin-top: 10px;
   padding: 10px 10px;
-  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -54,5 +86,18 @@
 
 .back-button:hover {
   background-color: #0056b3;
+}
+.delete-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: backgorund-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #b30000;
 }
 </style>
