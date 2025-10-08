@@ -14,7 +14,7 @@ import {
   onUnmounted,
   watchEffect,
 } from "vue";
-import axios, { post } from "axios";
+import axios from "axios";
 import { watch } from "vue";
 
 const products = ref([]);

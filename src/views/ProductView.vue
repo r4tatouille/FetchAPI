@@ -23,6 +23,17 @@ async function fetchData() {
   } catch (error) {}
 }
 
+function updateProduct(product) {
+  axios
+    .put(API_URL, product)
+    .then(() => {
+      router.push("/");
+    })
+    .catch((erorr) => {
+      console.erorr(erorr);
+    });
+}
+
 async function deleteProduct(params) {
   try {
     await axios.delete(API_URL);
@@ -39,7 +50,7 @@ async function deleteProduct(params) {
     <img :src="product.image" :alt="product.title" class="product-image" />
     <p>{{ product.description }}</p>
     <p>{{ product.price }}</p>
-    <ProductForm />
+    <ProductForm :product="product" @update-product="updateProduct" />
     <router-link to="/" class="back-button">Back</router-link>
     <button @click="deleteProduct" class="delete-button">Delete</button>
   </div>

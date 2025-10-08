@@ -8,20 +8,6 @@
       "id": "4"
     },
     {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "5"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "7"
-    },
-    {
       "id": "11",
       "title": "Wireless Charging Pad",
       "description": "Charge your compatible devices effortlessly with this sleek wireless charging pad.",
@@ -43,11 +29,11 @@
       "image": "https://placehold.co/600x400"
     },
     {
-      "id": "16",
-      "title": "Professional Espresso Machine",
-      "description": "Create barista-quality espresso at home with this professional-grade espresso machine.",
-      "price": 499.99,
-      "image": "https://placehold.co/600x400"
+      "title": "Edited Professional Espresso Machine",
+      "description": "Edited Create barista-quality espresso at home with this professional-grade espresso machine.",
+      "price": 511,
+      "image": "https://placehold.co/600x400",
+      "id": "16"
     },
     {
       "id": "17",
@@ -369,6 +355,13 @@
       "title": "Data Baru",
       "description": "Conoth Data Baru ",
       "price": 2221,
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": "cea2",
+      "title": "Product Baru ",
+      "description": "ini coba coba",
+      "price": 75000,
       "image": "https://placehold.co/600x400"
     }
   ]
