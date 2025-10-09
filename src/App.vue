@@ -9,7 +9,7 @@ import HomeView from "./views/HomeView.vue";
   <!-- <RouterView /> -->
   <suspense>
     <template #default>
-      <HomeView />
+      <router-view />
     </template>
     <template #fallback>
       <p>Loading...</p>
