@@ -5,83 +5,13 @@
       "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
       "price": 449,
       "image": "https://placehold.co/600x400",
-      "id": "1"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "2"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "3"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
       "id": "4"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "5"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "6"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "7"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "8"
-    },
-    {
-      "title": "Electric Standing Desk ",
-      "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449,
-      "image": "https://placehold.co/600x400",
-      "id": "9"
-    },
-    {
-      "id": "10",
-      "title": "Smart Home Security System",
-      "description": "Protect your home with this smart security system featuring cameras and sensors.",
-      "price": 349.99,
-      "image": "https://placehold.co/600x400"
     },
     {
       "id": "11",
       "title": "Wireless Charging Pad",
       "description": "Charge your compatible devices effortlessly with this sleek wireless charging pad.",
       "price": 39.99,
-      "image": "https://placehold.co/600x400"
-    },
-    {
-      "id": "12",
-      "title": "Ultra-Thin Laptop Stand",
-      "description": "Elevate your laptop for ergonomic use with this ultra-thin and portable laptop stand.",
-      "price": 29.99,
       "image": "https://placehold.co/600x400"
     },
     {
@@ -92,13 +22,6 @@
       "image": "https://placehold.co/600x400"
     },
     {
-      "id": "14",
-      "title": "High-Performance Blender",
-      "description": "Blend smoothies, soups, and more with ease using this powerful high-performance blender.",
-      "price": 149.99,
-      "image": "https://placehold.co/600x400"
-    },
-    {
       "id": "15",
       "title": "Durable Travel Backpack",
       "description": "Travel in style and comfort with this durable and spacious travel backpack.",
@@ -106,11 +29,11 @@
       "image": "https://placehold.co/600x400"
     },
     {
-      "id": "16",
-      "title": "Professional Espresso Machine",
-      "description": "Create barista-quality espresso at home with this professional-grade espresso machine.",
-      "price": 499.99,
-      "image": "https://placehold.co/600x400"
+      "title": "Edited Professional Espresso Machine",
+      "description": "Edited Create barista-quality espresso at home with this professional-grade espresso machine.",
+      "price": 511,
+      "image": "https://placehold.co/600x400",
+      "id": "16"
     },
     {
       "id": "17",
@@ -432,6 +355,13 @@
       "title": "Data Baru",
       "description": "Conoth Data Baru ",
       "price": 2221,
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": "cea2",
+      "title": "Product Baru ",
+      "description": "ini coba coba",
+      "price": 75000,
       "image": "https://placehold.co/600x400"
     }
   ]
